@@ -4,35 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QCM-PHARMACOLOGIE</title>
+    <link rel="stylesheet" href="index.css"> 
 </head>
 <body>
-      <form id="quizForm">
-        <h1>QCM-PHARMACOLOGIE</h1>
-       <div>
-        <div><label for="q1"><h3>Question 1: Les médicaments sous forme de sirop sont interdits?</h3></label></div>
-        <div><input type="checkbox" name="q1" value="0"> Patients hypertendus</div>
-        <div><input type="checkbox" name="q1" value="1"> Ldiabétiques</div>
-        <div><input type="checkbox" name="q1" value="2"> Patients anémiques</div>
-        <div><input type="checkbox" name="q1" value="3"> des patients atteints du cancer</div>
-       </div>
-       <div>
-        <div><label for="q2"><h3>Question 2: les locales d'administration des médicaments sont?</h3></label></div>
-        <div><input type="checkbox" name="q2" value="0"> respiration</div>
-        <div><input type="checkbox" name="q2" value="1"> sublinguale</div>
-        <div><input type="checkbox" name="q2" value="2"> vaginale</div>
-        <div><input type="checkbox" name="q2" value="3"> oculaire</div>
-       </div>
-       <div>
-        <div><label for="q3"><h3>Question 3: les avantage d administration des médicament par la voies orale sont?</h3></label></div>
-        <div><input type="checkbox" name="q3" value="0"> facile</div>
-        <div><input type="checkbox" name="q3" value="1"> économique assez rapide</div>
-        <div><input type="checkbox" name="q3" value="2"> traitement ambulatoire possible</div>
-        <div><input type="checkbox" name="q3" value="3"> Absence d'altération par les enzymes digestives</div>
-      </div>
-       <!-- Other questions go here -->
-        <div><button type="submit">Submit</button></div>
-</form>
-<div id="result"></div>
-<script src="/index.js"></script>
+    <form id="quizForm">
+        <h2>QCM-PHARMACOLOGIE</h2>
+        <div>
+            <div><label for="q1"><h4>Question 1: Les médicaments sous forme de sirop sont interdits?</h4></label></div>
+            <div><input type="checkbox" name="q1" value="0"> Patients hypertendus</div>
+            <div><input type="checkbox" name="q1" value="1"> Ldiabétiques</div>
+            <div><input type="checkbox" name="q1" value="2"> Patients anémiques</div>
+            <div><input type="checkbox" name="q1" value="3"> des patients atteints du cancer</div>
+        </div>
+        <div>
+            <div><label for="q2"><h4>Question 2: les locales d'administration des médicaments sont?</h4></label></div>
+            <div><input type="checkbox" name="q2" value="0"> respiration</div>
+            <div><input type="checkbox" name="q2" value="1"> sublinguale</div>
+            <div><input type="checkbox" name="q2" value="2"> vaginale</div>
+            <div><input type="checkbox" name="q2" value="3"> oculaire</div>
+        </div>
+        <div>
+            <div><label for="q3"><h4>Question 3: les avantages d'administration des médicaments par la voie orale sont?</h4></label></div>
+            <div><input type="checkbox" name="q3" value="0"> facile</div>
+            <div><input type="checkbox" name="q3" value="1"> économique assez rapide</div>
+            <div><input type="checkbox" name="q3" value="2"> traitement ambulatoire possible</div>
+            <div><input type="checkbox" name="q3" value="3"> Absence d'altération par les enzymes digestives</div>
+        </div>
+        <button type="submit"><a style="text-decoration: none; pointer-events: none;color: white;" href="#results">Submit</a></button>
+    </form>
+    <div class="results" id="result"></div>
+    <div id="correctAnswers" style="display: none;">
+        <h3>Réponses correctes:</h3>
+        <div><p style="color: #6a9955;">Question 1:</p> Ldiabétiques</div>
+        <div><p style="color: #6a9955;">Question 2:</p> respiration, vaginale, oculaire</div>
+        <div><p style="color: #6a9955;">Question 3:</p> facile, économique assez rapide, traitement ambulatoire possible</div>
+    </div>
+    <button class="animated-button1" id="toggleCorrectAnswers" onclick="toggleCorrectAnswers()">Afficher les bonnes réponses</button>
+    <script src="index.js"></script>
 </body>
 </html>
